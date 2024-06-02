@@ -2,7 +2,7 @@
 
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
   
-      url("images/freedom.jpg") left 10% bottom 80%/cover no-repeat border-box,
+      url("images/freedom.jpg") center/cover no-repeat border-box,
   
       #ff1b68;
   
@@ -26,7 +26,7 @@
   
     height: 40vh;
   
-    margin-top: 2.75rem;
+    margin-top: 3.5rem;
   
     /* border: 5px dashed red; */
   
@@ -45,29 +45,46 @@
     position: absolute;
     bottom: 5%;
     left: 3%;
+    font-size: 1.6rem;
     /* width: 100%; */
 }
 
-.plan__list {
-    width: 80%;
-    margin: auto;
-    text-align: center;
+@media (min-width: 40rem) and (min-height: 40rem) {
+    #product-overview  {
+        height: 40vh;
+        background-position: 50% 25%;
+    }
+    #product-overview h1 {
+        font-size: 3rem;
+    }
 }
+
+@media (min-width: 60rem) {
+    #product-overview  {
+        height: 50vh;
+        background-position: 50% 25%;
+    }
+    #product-overview h1 {
+        font-size: 5rem;
+    }
+}
+
+
 
 .plan {
     background: #d5ffdc;
     text-align: center;
     padding: 1rem;
-    margin: 0.5rem;
-    display: inline-block;
-    width: 30%;
-    vertical-align: middle;
+    margin: 0.5rem 0;
+    /* display: inline-block; */
+    width: 100%;
+    /* vertical-align: middle; */
 }
 
 .plan--highlighted {
     background: #19b84c;
     color: white;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); */
 }
 
 .plan__annotation {
@@ -104,6 +121,25 @@
     margin: 0.5rem 0;
 }
 
+@media (min-width: 40rem) {
+    .plan__list {
+    width: 100%;
+    text-align: center;
+    }
+    .plan {
+        width: 30%;
+        display: inline-block;
+        margin: 0.5rem;
+        min-width: 13rem;
+        max-width: 25rem;
+    }
+
+    .plan--highlighted {
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+}
+
 #key-features {
     background: #ff1b68;
     margin-top: 5rem;
@@ -120,12 +156,15 @@
     margin: 0;
     padding: 0;
     text-align: center;
+    /*margin: auto;*/
 }
 
 .key-feature {
-    display: inline-block;
-    width: 30%;
+    /* display: inline-block; */
+    width: 100%;
     vertical-align: top;
+    align-self: center;
+    margin: auto;
 }
 
 .key-feature__image {
@@ -143,6 +182,15 @@
     font-weight: bold;
     color: white;
     font-size: 1.2rem;
+}
+
+@media screen and (min-width: 40rem) {
+    .key-feature {
+        width: 30%;
+        display: inline-block;
+        max-width: 25rem;
+    }
+    
 }
 
 .modal {
