@@ -26,8 +26,6 @@
   
     height: 40vh;
   
-    margin-top: 3.5rem;
-  
     /* border: 5px dashed red; */
   
     position: relative;
@@ -124,18 +122,25 @@
 @media (min-width: 40rem) {
     .plan__list {
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
     .plan {
         width: 30%;
-        display: inline-block;
         margin: 0.5rem;
         min-width: 13rem;
         max-width: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 28rem;
     }
 
     .plan--highlighted {
         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        height: 30rem;
+        z-index: 50;
     }
     
 }
@@ -156,11 +161,9 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    /*margin: auto;*/
 }
 
 .key-feature {
-    /* display: inline-block; */
     width: 100%;
     vertical-align: top;
     align-self: center;
@@ -184,13 +187,17 @@
     font-size: 1.2rem;
 }
 
-@media screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
     .key-feature {
         width: 30%;
-        display: inline-block;
         max-width: 25rem;
+        vertical-align: top;
     }
     
+    .key-feature__list {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .modal {
